@@ -34,6 +34,20 @@ let chart = c3.generate({
         ]
     },
     donut: {
-        title: '好きなセクシー女優は？'
+        title: 'AV女優は誰が好き？'
     }
 });
+setTimeout(() => {
+    chart.load({
+        columns: [
+            ['上原亜衣', 30],
+            ['みづなれい', 30],
+            ['波多野結衣', 30]
+        ]
+    });
+}, 3000);
+setTimeout(() => {
+    chart.unload({
+        ids: '安斎らら'
+    });
+}, 5000);

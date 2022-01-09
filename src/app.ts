@@ -10,11 +10,26 @@ let chart = c3.generate({
     data: {
         type: 'donut',
         columns: [
-            ['BD', 50],
-            ['SP', 50]
+            ['上原歩夢', 50],
+            ['優木せつ菜', 50]
         ]
     },
     donut: {
-        title: 'ポケモンどっち？'
+        title: 'アイドルは誰が好き？'
     }
 });
+
+setTimeout(() => {
+    chart.load({
+        columns: [
+        ['上原歩夢', 30],
+        ['優木せつ菜', 30],
+        ['宮下愛', 30]
+    ]
+    });
+}, 3000);
+setTimeout(() => {
+    chart.unload({
+        ids: '優木せつ菜'
+    });
+}, 5000);
